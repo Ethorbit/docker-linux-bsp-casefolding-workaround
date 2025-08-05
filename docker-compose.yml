@@ -1,0 +1,11 @@
+services:
+  linux-bsp-casefolding-workaround:
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    command: --monitor
+    volumes:
+      - ./data:/data
+      - /mnt/games/SteamLibrary:/mnt/games/SteamLibrary
+      - /home/workstation/.var/app/com.valvesoftware.Steam/.steam/steam:/home/bsp/.steam/steam:ro
