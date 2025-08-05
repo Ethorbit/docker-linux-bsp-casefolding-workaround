@@ -6,4 +6,4 @@
 cd /data
 cp -rap "$HOME/lbspcfw" ./
 chmod +x ./lbspcfw/lbspcfw.sh
-exec ./lbspcfw/lbspcfw.sh
+exec ./lbspcfw/lbspcfw.sh "$@"
