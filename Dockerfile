@@ -6,7 +6,8 @@ ARG GID=1000
 VOLUME /data
 VOLUME /home/bsp/.steam/steam
 
-RUN apt update -y &&\ 
+RUN apt update -y &&\
+    apt-get install --only-upgrade libstdc++6 &&\
     apt install -y git \
         curl \
         inotify-tools \
